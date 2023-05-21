@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comparison Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="result-container">
+    <h2>Comparison Result</h2>
+    <img src="data:image/png;base64,{{ plot_data }}" class="plot" alt="Comparison Graph">
+  </div>
+</body>
+</html>

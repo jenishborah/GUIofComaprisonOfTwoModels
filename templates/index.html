@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comparison of Disease Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Disease Detection</h1>
+    <form action="{{ url_for('compare') }}" method="POST">
+      <label for="dataset">Dataset:</label>
+      <input type="text" id="dataset_path" name="dataset_path" placeholder="Enter dataset path or link" required>
+
+      <label for="model1">Model 1:</label>
+      <select id="model1" name="model1" required>
+        <option value="jenish">My Own Model (Jenish)</option>
+        <option value="efficientnet">EfficientNet</option>
+        <option value="alexnet">AlexNet</option>
+      </select>
+
+      <label for="model2">Model 2:</label>
+      <select id="model2" name="model2" required>
+        <option value="jenish">My Own Model (Jenish)</option>
+        <option value="efficientnet">EfficientNet</option>
+        <option value="alexnet">AlexNet</option>
+      </select>
+
+      <label for="epochs">Epochs:</label>
+      <input type="number" id="epochs" name="epochs" min="1" required>
+
+      <label for="batch_size">Batch Size:</label>
+      <input type="number" id="batch_size" name="batch_size" min="1" required>
+
+      <button type="submit">Compare Models</button>
+    </form>
+  </div>
+</body>
+</html>
